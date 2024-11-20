@@ -21,7 +21,7 @@ public class KeycloakAuthorizationErrorFilter implements WebFilter {
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         return chain.filter(exchange)
                 .onErrorResume(ClientAuthorizationException.class, ex -> {
-                    System.err.println("Erro de autorização detectado: " + ex.getMessage());
+                    System.err.println("Erro de autorização: " + ex.getMessage());
 
                     // Remover cookies configurando `Set-Cookie` com Max-Age=0
                     exchange.getRequest().getCookies().forEach((name, cookies) -> {

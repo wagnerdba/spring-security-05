@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: gateway
+
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: gateway
+            client-secret: 4eCye7GmqwG69gHj05f43oSaZY2NUug9
+            scope: openid, profile, email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8083/realms/wagnerpires
+  cloud:
+    gateway:
+      routes:
+        - id: hello-api
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/hello
+          filters:
+            - TokenRelay

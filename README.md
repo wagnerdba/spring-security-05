@@ -76,7 +76,7 @@ Para compilar e executar os projetos, os seguintes itens são necessários:
 
 1 - Executar Keycloak
 ```
-docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.5 start-dev
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.0.5 start-dev
 ```
 
 2 - Criar um realm

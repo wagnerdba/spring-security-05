@@ -20,7 +20,7 @@ class ApiController {
 
 	@GetMapping("/hello")
 	public String hello() {
-		return "Rota Privada. Acesso Concedido!";
+		return "<h1>Rota Privada. Acesso Concedido!</h1>";
 	}
 }
 

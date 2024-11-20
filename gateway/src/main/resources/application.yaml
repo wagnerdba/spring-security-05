@@ -11,16 +11,16 @@ spring:
         registration:
           keycloak:
             client-id: gateway
-            client-secret: 4eCye7GmqwG69gHj05f43oSaZY2NUug9
+            client-secret: gYleV6s68WPCBpoaHLclu5I5CZnuf01v
             scope: openid, profile, email
         provider:
           keycloak:
-            issuer-uri: http://localhost:8083/realms/wagnerpires
+            issuer-uri: http://192.168.1.16:8080/realms/wagnerpires
   cloud:
     gateway:
       routes:
         - id: hello-api
-          uri: http://localhost:8084
+          uri: http://192.168.1.9:8084
           predicates:
             - Path=/api/hello
           filters:

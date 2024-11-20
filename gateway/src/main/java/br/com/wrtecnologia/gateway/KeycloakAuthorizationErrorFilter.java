@@ -15,7 +15,7 @@ import java.net.URI;
 @Component
 public class KeycloakAuthorizationErrorFilter implements WebFilter {
 
-    private static final String LOGIN_URL = "http://localhost:9001/api/hello"; // Página de login ou revalidação
+    private static final String LOGIN_URL = "http://192.168.1.9:9001/api/hello"; // Página de login ou revalidação
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
